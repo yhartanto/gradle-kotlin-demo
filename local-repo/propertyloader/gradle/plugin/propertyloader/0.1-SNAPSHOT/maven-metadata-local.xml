@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>propertyloader.gradle.plugin</groupId>
+  <artifactId>propertyloader</artifactId>
+  <version>0.1-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <localCopy>true</localCopy>
+    </snapshot>
+    <lastUpdated>20160622054945</lastUpdated>
+  </versioning>
+</metadata>

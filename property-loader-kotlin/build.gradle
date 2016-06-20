@@ -1,0 +1,33 @@
+buildscript {
+    ext.kotlin_version = '1.0.2-1'
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlin_version}"
+    }
+}
+
+apply plugin: 'kotlin'
+apply plugin: 'maven-publish'
+
+dependencies {
+    compile gradleApi()
+    compile "org.jetbrains.kotlin:kotlin-stdlib:${kotlin_version}"
+}
+
+kapt {
+    generateStubs = true
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            groupId 'propertyloader.gradle.plugin'
+            artifactId 'propertyloader-kotlin'
+            version '0.1-SNAPSHOT'
+        }
+    }
+}
+
+sourceSets {
+    main.java.srcDirs += 'src/main/kotlin'
+}
